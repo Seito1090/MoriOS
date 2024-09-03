@@ -1,0 +1,44 @@
+{
+    // Basic environment settings
+
+    "workbench.colorTheme": "One Dark Pro Flat",
+
+    "window.menuBarVisibility": "visible",
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.titleBarStyle": "custom",
+    "window.newWindowDimensions": "inherit",
+    "window.restoreFullscreen": true,
+
+    "workbench.sideBar.location": "right",
+    "workbench.editor.showTabs": "none",
+    "workbench.startupEditor": "none",
+
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "update.mode": "none",
+
+    "editor.stickyScroll.enabled": false,
+    "editor.minimap.enabled": false,
+    "editor.codeActions.triggerOnFocusChange": true,
+    "editor.guides.indentation": true,
+    "editor.hideCursorInOverviewRuler": true,
+
+    // Extensions settings
+    // Gippity
+    "github.copilot.editor.enableAutoCompletions": false,
+    "github.copilot.renameSuggestions.triggerAutomatically": false,
+    "github.copilot.enable": {
+      "*": false,
+      "plaintext": false,
+      "markdown": false,
+      "scminput": false
+    },
+
+    // Custom styles
+    "vscode_custom_css.imports": [
+      "file:///home/seito/.config/vscode_settings/css_config/pretty_bar.css",
+    ]
+}
