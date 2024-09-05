@@ -1,0 +1,15 @@
+github.copilot
+github.copilot-chat
+zhuangtongfa.material-theme
+be5invis.vscode-custom-css
+bierner.color-info
+ms-python.python
+ms-python.debugpy
+ms-python.vscode-pylance
+redhat.java
+vscjava.vscode-maven
+vscjava.vscode-java-test
+vscjava.vscode-java-pack
+vscjava.vscode-java-debug
+twxs.cmake
+ms-vscode.cpptools-extension-pack

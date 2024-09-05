@@ -4,6 +4,7 @@ declare PACKAGE_MANAGER="dnf"
 declare INSTALL_TYPE="full"
 declare CUSTOM="true"
 declare VERSION="Code - Insiders"
+declare TERMINAL_CALL="code-insiders"
 
 if [ "$EUID" -ne 0 ]; then
   echo "This script must be run as root since we need to install things :) Please try again with sudo or as root."
@@ -32,6 +33,7 @@ if [ -n "$FOUND_CODE" ]; then
   TEMP=$(sudo $PACKAGE_MANAGER list installed | grep code-insiders)
   if [ -z "TEMP" ]; then
     VERSION="Code"
+    TERMINAL_CALL="code"
   fi
 else
   echo "VSCode not found, you either do not have it or didn't install it through the package manager"
@@ -45,7 +47,7 @@ echo "Do you want to install the custom settings and extensions for it ? [Y/n]"
 read input_custom
 
 if [ "$input_custom" != "n" ] && [ "$input_custom" != "N" ]; then
-  #./get_settings.sh # TODO, this thing <-, it installs the custom extensions and gets the config stored on git
+  ./get_settings.sh $TERMINAL_CALL $SUDO_USER # TODO, this thing <-, it installs the custom extensions and gets the config stored on git
 else
   CUSTOM="false"
   if [ -n "$FOUND_CODE" ]; then
@@ -56,7 +58,7 @@ else
 fi
 
 # Part where settings json is downloaded and yeeted to the correct place
-wget https://raw.githubusercontent.com/Seito1090/MoriOS/main/configs/vscode/settings.json
+wget https://raw.githubusercontent.com/Seito1090/MoriOS/main/configs/vscode/settings.json > /dev/null 2>&1
 echo
 CHECK=$(ls -a | grep settings.json)
 if [ -n "$CHECK" ]; then
