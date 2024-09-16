@@ -73,4 +73,7 @@ if [ -n "$CHECK" ]; then
   fi
 fi
 
+
+# Check the permissions to vscode
+
 echo "hi"

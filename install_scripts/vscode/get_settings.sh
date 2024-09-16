@@ -15,4 +15,5 @@ for ext in "${extensions[@]}"
 do
   sudo -u "$USER" bash -c "$CODE_VERSION --install-extension $ext"
 done
+
 echo $CODE_VERSION
