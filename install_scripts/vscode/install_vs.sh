@@ -73,7 +73,7 @@ echo "Do you want to install the custom settings and extensions for it ? [Y/n]"
 read input_custom
 
 if [ "$input_custom" != "n" ] && [ "$input_custom" != "N" ]; then
-  ./get_settings.sh $TERMINAL_CALL $SUDO_USER
+  ./install_scripts/vscode/get_settings.sh $TERMINAL_CALL $SUDO_USER
 else
   exit 0
 fi
@@ -100,4 +100,9 @@ fi
 sudo chown -R $SUDO_USER "$(which $TERMINAL_CALL)"
 sudo chown -R $SUDO_USER /usr/share/$TERMINAL_CALL
 
+mkdir -p $USER_HOME/.config/vscode_settings/css_config/
+cp configs/vscode/css/pretty_bar.css $USER_HOME/.config/vscode_settings/css_config/
+
 echo "Done."
+echo "If the theme did not apply on vscode, press F1 and reload css and js."
+echo "If promped, restart Vscode, if it complains to be corrupted, it can be ignored."

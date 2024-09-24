@@ -7,7 +7,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-input="../../configs/vscode/extensions_ids.txt"
+input="configs/vscode/extensions_ids.txt"
 while IFS= read -r line
 do
   extensions+=("$line")
@@ -25,3 +25,4 @@ do
     echo -e "- '$ext' : ${RED}ERROR.${NC}"
   fi
 done
+
