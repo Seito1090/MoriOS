@@ -51,7 +51,7 @@ esac
 # Installing vscode / checking if it is already there
 echo "Checking for vscode"
 
-FOUND_CODE=$($PACK_LIST | grep code*)
+FOUND_CODE=$($PACK_LIST | grep @code)
 
 if [ -n "$FOUND_CODE" ]; then
   echo "VSCode installed, we don't have to download it"
